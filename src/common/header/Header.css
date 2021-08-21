@@ -1,0 +1,25 @@
+/*
+It should have the background colour #ff7f7f.
+
+It should have a height of 35px.
+
+It should rotate infinitely with a complete cycle of 8 seconds, and the speed curve of the animation should be linear.
+
+It should be on the left of the header.
+*/
+
+.header {
+    background: #222;
+    height: 36px;
+    padding: 8px 8px 32px 16px
+}
+
+img {
+    background: #ff7f7f;
+    height: 35px;
+    animation-duration: 8s
+}
+
+.login-button {
+    right: -90%;
+}
