@@ -23,3 +23,11 @@ img {
 .login-button {
     right: -90%;
 }
+
+.modal-content {
+    height: 50%;
+    width: 100px; 
+    top: 50px;
+    vertical-align: middle;
+    transform: 'translate(-50%, -50%)'
+  }

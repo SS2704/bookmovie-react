@@ -1,13 +1,15 @@
-import React from 'react';
+import React, {Fragment, useState} from 'react';
 import Button from '@material-ui/core/Button';
-import Modal from 'react-modal';
+
 //import './Login.css';
 
-export default function Login() {
+ //Modal.setAppElement("#root");
+
+export default function Login(isOpen) {
+
 
     return(
-        <div>
-           <Modal></Modal>
-        </div>
+        <div><h3>Login Page</h3></div>
     )
+    
 }
