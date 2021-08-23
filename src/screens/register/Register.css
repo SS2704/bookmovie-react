@@ -1,15 +1,15 @@
 
-.login-button {
+.register-button {
      right: -90%;
 }
 
-.login-info-container {
+.register-info-container {
      font-size: 1rem;
      margin-right: 10px;
      margin-bottom: 20px;
  }
  
  
- .login-info {
+ .register-info {
      color: #808080;
  }

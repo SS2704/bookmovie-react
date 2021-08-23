@@ -3,18 +3,29 @@ import logo from '../../assets/logo.svg';
 
 import {Link} from 'react-router-dom';
 import Login from '../../screens/login/Login';
+import Register from '../../screens/register/Register';
 import Logout from '../../screens/logout/Logout';
 import Button from '@material-ui/core/Button';
 import React, { Fragment, useState} from 'react'
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import  {Tab, Tabs} from '@material-ui/core';
+import  {AppBar, Tab, Tabs} from '@material-ui/core';
 //  import { TabPanel } from '@material-ui/lab';
 import Modal from 'react-modal';
 import { Paper } from '@material-ui/core';
 
+import Typography from '@material-ui/core/Typography';
+//import Box from '@material-ui/core/Box';
+import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core/styles';
+
 Modal.setAppElement("#root");
 
 export default function Header({}){
+    const [selectedTab, setselectedTab] = React.useState(0);
+  
+    const handleChange = (event, newValue) => {
+        setselectedTab(newValue);
+    };
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -29,24 +40,24 @@ export default function Header({}){
     return(
         <Fragment>
             <div className='header'>
-                <img src={logo} alt='Logo' />
+                <img src={logo} alt='Logo' class="rotate linear infinite" />
                 <Button variant='contained' className='login-button' onClick={loginHandler}>Login</Button>
-                {/* <Button variant='contained' className='login-button' onClick={loginHandler}>Login</Button> */}
+                
             </div>
             <div className="modal-content">
 
-            <Modal  isOpen={isOpen} onRequestClose={toggleModal} contentLabel="My dialog" 
-                >
+            <Modal  isOpen={isOpen} onRequestClose={toggleModal} contentLabel="My dialog" dialogClassName='model-content'>
                 <div>         
-                    <Tabs  indicatorColor="primary" textColor="primary" >
-                    {/* <Tab label="Login"  value="/login" component={Link} to="/login" />  */}
-                        <Tab label="Login"  value="0"/>
+                    <Tabs value={selectedTab} onChange={handleChange}>
+                        <Tab label="Login" />
+                        <Tab label="Register" />
+                    </Tabs>
+                </div>
                 
-                 <Tab label="Register" value="1" />
-             </Tabs>
-            </div>
-                <button onClick={toggleModal}>Close modal</button>
+                {selectedTab === 0 && <Login />}
+                {selectedTab === 1 && <Register />}
             </Modal>
+            
         </div>
         </Fragment>
     )
