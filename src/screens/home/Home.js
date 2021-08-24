@@ -14,7 +14,7 @@ export default function Home() {
 
     return(
         <Fragment>
-            <Header />
+            <Header toggleModal/>
             
         
         </Fragment>

@@ -1,6 +1,10 @@
 
 .register-button {
-     right: -90%;
+    left: 500% 
+}
+
+.input-control {
+    margin-bottom: 50%;
 }
 
 .register-info-container {
@@ -13,3 +17,33 @@
  .register-info {
      color: #808080;
  }
+
+ .register-content {
+    margin-top: 2%;
+  /* left: '50%';
+  right: 'auto';
+  bottom: 'auto';
+  
+  width: '60%';
+    */
+   transform: 'translate(-40%, -10%)';
+  margin-left: 50%;
+  padding-top: 10px;
+  width:50% !important; 
+  height: 100% !important;
+  /* background: #ff7f7f; */
+  }
+/* 
+  .ReactModal__Content--after-open {
+     top: '35%';
+  left: '50%';
+  right: 'auto';
+  bottom: 'auto';
+  margin : '-50%';
+  width: '60%';
+  transform: 'translate(-40%, -10%)'; 
+  width:25% !important; 
+  top:12% !important;
+  left:35% !important;
+  height: 70% !important; 
+  }  */

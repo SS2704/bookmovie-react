@@ -1,6 +1,6 @@
 
 .login-button {
-     right: -90%;
+     left: 50%
 }
 
 .login-info-container {
@@ -13,3 +13,41 @@
  .login-info {
      color: #808080;
  }
+
+ .login-content {
+     margin-top: 2%;
+   /* left: '50%';
+   right: 'auto';
+   bottom: 'auto';
+   
+   width: '60%';
+     */
+    transform: 'translate(-40%, -10%)';
+   margin-left: 70px;
+   padding-bottom: 10px;
+   width: 100px ; 
+   /* background: #ff7f7f; */
+   }
+
+   .input-control {
+        padding-top: 50%;
+        padding-bottom: 50%;
+        width: 200px;
+   }
+   /* .MuiInput-formControl-84 {
+     padding-bottom: 50%;
+   
+   } */
+   .ReactModal__Content--after-open {
+     /* top: '35%';
+   left: '50%';
+   right: 'auto';
+   bottom: 'auto';
+   margin : '-50%';
+   width: '60%';
+   transform: 'translate(-40%, -10%)'; */
+   width:25% !important; 
+   top:20% !important;
+   left:35% !important;
+   height: 60% !important; 
+   }

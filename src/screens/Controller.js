@@ -7,13 +7,14 @@ export default function Controller(){
  
     return(
         <Fragment>
-            <Home />
-            {/* <Router>
+ 
+            <Router>
                 <Route exact path='/' render={ () => <Home />} />
             </Router>
-            <Router>
+
+            {/* <Router>
                 <Route exact path='/login' render={(props) => <Header  />} />
-                {/* <Route exact path='/add' render={ ({history}, props)=> <AddSubscriber history={history} {...props} addSubscriberHandler={(newSubsciber)=>addSubscriberHandler(newSubsciber)} />} /> 
+                { <Route exact path='/add' render={ ({history}, props)=> <AddSubscriber history={history} {...props} addSubscriberHandler={(newSubsciber)=>addSubscriberHandler(newSubsciber)} />} /> 
             </Router>  */}
            
         </Fragment>     
