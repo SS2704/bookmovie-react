@@ -11,6 +11,7 @@
      font-size: 1rem;
      margin-right: 10px;
      margin-bottom: 20px;
+     width: 50%;
  }
  
  
@@ -41,9 +42,13 @@
   bottom: 'auto';
   margin : '-50%';
   width: '60%';
-  transform: 'translate(-40%, -10%)'; 
+  transform: 'translate(-40%, -10%)' !important;  
   width:25% !important; 
-  top:12% !important;
+  top:20% !important;
   left:35% !important;
-  height: 70% !important; 
+  height: 60% !important; 
   }  */
+
+  .successMsg {
+      width: 50% !important;
+  }

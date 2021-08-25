@@ -8,6 +8,8 @@ export default function Register() {
     const history = useHistory();
     let successmessage="";
     
+    const [isRegistered,setisRegistered] = useState(false);
+
    function inputChangedHandler(e){
        const state = registerUserForm;
        state[e.target.name] = e.target.value;
@@ -39,14 +41,15 @@ export default function Register() {
             const result = await rawResponse.json();
 
             if(rawResponse.ok){
-                successmessage="Registration Successful! Please Login."
+                setisRegistered(true);
+                // registerUserForm['successmessage']="Registration Successful! Please Login."
                 //history.push("/");
             }else{
                 const error = new Error();
                 error.message = result.message || 'Something went wrong.';
                 throw error;
             }
-
+            
         }catch(e){
             alert(`Error: ${e.message}`);
         }
@@ -57,7 +60,8 @@ export default function Register() {
         lastname   : '', 
         email      : '', 
         password   : '', 
-        contactnum : '' 
+        contactnum : '' ,
+        successmessage: ''
     
    });
 
@@ -65,10 +69,10 @@ export default function Register() {
 
     return(
         <div className='register-content'> 
-            
+           
             <ValidatorForm className='register-form' onSubmit={onRegisterSubmit}>  
             <FormControl className='register-content' >
-                <TextValidator 
+            <div> <TextValidator 
                     id='firstname' 
                     type='text' 
                     className='input-control' 
@@ -124,11 +128,15 @@ export default function Register() {
                     validators={['required']}
                     errorMessages={"required"}
                 ></TextValidator>
+                </div>
                 <div className='register-info-container'>
                     {/* <span className='subscriber-to-add-heading'> Subscriber to be added: </span><br /> */}
-                    <span ><InputLabel>{successmessage}</InputLabel></span><br /> <br /> 
-                   <br /> <span className='register-info'><Button variant='contained' type='submit' className='register-button'>Register</Button></span>
+                    <span >
+                        <div className='successMsg'>{isRegistered == true && <label className='successMsg' wrapText={false} >"Registration Successful! Please Login."</label>}</div>
+                    </span><br /> <br /> 
+                   <br /> <span className='register-info'><Button variant='contained' color='primary' type='submit' className='register-button'>Register</Button></span>
                 </div>
+               
             </FormControl>
             </ValidatorForm>  
         </div>

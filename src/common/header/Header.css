@@ -1,12 +1,3 @@
-/*
-It should have the background colour #ff7f7f.
-
-It should have a height of 35px.
-
-It should rotate infinitely with a complete cycle of 8 seconds, and the speed curve of the animation should be linear.
-
-It should be on the left of the header.
-*/
 
 .header {
     background: #222;
@@ -23,16 +14,19 @@ img {
 .login-header-button {
     right: -90%;
 }
+.logout-header-button {
+    right: -90%;
+    
+}
 
-/* ReactModal__Content ReactModal__Content--after-open" tabindex="-1" role="dialog" aria-label="My dialog" aria-modal="true" style="position: absolute; inset: 40px; border: 1px solid rgb(204, 204, 204); background: rgb(255, 255, 255); overflow: auto; border-radius: 4px; outline: none; padding: 20px;"><div class="model-content"><div class="MuiTabs-root-37"><div class="MuiTabs-flexContainer-38"><div class="MuiTabs-scroller-40 MuiTabs-fixed-41" role="tablist" style="margin-bottom: 0px;"><div class="MuiTabs-flexContainer-38"><button class="MuiButtonBase-root-27 MuiTab-root-46 MuiTab-textColorInherit-48 MuiTab-selected-51" tabindex="0" type="button" role="tab" aria-selected="true"><span class="MuiTab-wrapper-54"><span class="MuiTab-labelContainer-55"><span class="MuiTab-label-56">Login</span></span></span><span class="MuiTouchRipple-root-30"></span></button><button class="MuiButtonBase-root-27 MuiTab-root-46 MuiTab-textColorInherit-48" tabindex="0" type="button" role="tab" aria-selected="false"><span class="MuiTab-wrapper-54"><span class="MuiTab-labelContainer-55"><span class="MuiTab-label-56">Register</span></span></span><span class="MuiTouchRipple-root-30"></span></button></div><span class="MuiPrivateTabIndicator-root-58 MuiPrivateTabIndicator-colorSecondary-60 MuiTabs-indicator-45" style="left: 0px; width: 160px;"></span></div></div></div></div><div class="login-content"><form class="login-form"><div class="MuiFormControl-root-61"><div><div class="MuiFormControl-root-61 input-control"><label class="MuiFormLabel-root-76 MuiInputLabel-root-65 MuiInputLabel-formControl-70 MuiInputLabel-animated-73" data-shrink="false">Username*</label><div class="MuiInputBase-root-96 MuiInput-root-83 MuiInput-underline-87 MuiInputBase-formControl-97 MuiInput-formControl-84"><input aria-invalid="false" class="MuiInputBase-input-106 MuiInput-input-91" name="username" type="text" value=""></div></div></div><div><div class="MuiFormControl-root-61 input-control"><label class="MuiFormLabel-root-76 MuiInputLabel-root-65 MuiInputLabel-formControl-70 MuiInputLabel-animated-73" data-shrink="false">Password*</label><div class="MuiInputBase-root-96 MuiInput-root-83 MuiInput-underline-87 MuiInputBase-formControl-97 MuiInput-formControl-84"><input aria-invalid="false" class="MuiInputBase-input-106 MuiInput-input-91" name="password" type="text" value=""></div></div></div><div class="login-info-container"><br><br><span class="login-info"><button class="MuiButtonBase-root-27 MuiButton-root-1 MuiButton-contained-12 MuiButton-raised-15 login-button" tabindex="0" type="submit"><span class="MuiButton-label-2"> */
+.upcomingMovies {
+    text-align: center;
+    background: #ff9999;
+    padding: 8px 8px 8px 8px;
+    font-size: 1rem;
+}
+
 .ReactModal__Content--after-open {
-    /* top: '35%';
-  left: '50%';
-  right: 'auto';
-  bottom: 'auto';
-  margin : '-50%';
-  width: '60%';
-  transform: 'translate(-40%, -10%)'; */
   width:25% !important; 
   top:20% !important;
   left:35% !important;

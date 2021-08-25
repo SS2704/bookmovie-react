@@ -24,15 +24,20 @@
      */
     transform: 'translate(-40%, -10%)';
    margin-left: 70px;
-   padding-bottom: 10px;
+   padding-bottom: 20%;
    width: 100px ; 
    /* background: #ff7f7f; */
    }
-
+   /* .MuiFormControl-root-61 {
+          padding-top: 20%;
+          margin-left: 70%;
+   } */
    .input-control {
         padding-top: 50%;
         padding-bottom: 50%;
         width: 200px;
+        position: static;
+        /* /margin-top: 50%; */
    }
    /* .MuiInput-formControl-84 {
      padding-bottom: 50%;
@@ -46,7 +51,7 @@
    margin : '-50%';
    width: '60%';
    transform: 'translate(-40%, -10%)'; */
-   width:25% !important; 
+   width:35% !important; 
    top:20% !important;
    left:35% !important;
    height: 60% !important; 

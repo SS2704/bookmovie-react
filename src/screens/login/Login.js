@@ -6,8 +6,9 @@ import { Link, useHistory } from 'react-router-dom'
 import { Base64 } from 'js-base64';
 import { ModalStateContext}  from '../../common/ModalContext';
 
-export default function Login() {
+export default function Login({onSubmit}) {
     const history = useHistory();
+    //const onSubmit = () => onSubmit();
 
     const [submitLoginForm, setsubmitLoginForm] = useState({
         id: 0,
@@ -18,8 +19,6 @@ export default function Login() {
     const { username, password } = submitLoginForm;
 
 
-
-
     function inputChangedHandler(e) {
         const state = submitLoginForm;
         state[e.target.name] = e.target.value;
@@ -28,6 +27,7 @@ export default function Login() {
     }
 
     async function onLoginFormSubmitted(e) {
+       // alert('Inside onLoginFormSubmitted');
         e.preventDefault();
         const param = Base64.encode(`${username}:${password}`);
         console.log(param);
@@ -45,8 +45,9 @@ export default function Login() {
             if (rawResponse.ok) {
                 window.sessionStorage.setItem('user-details', JSON.stringify(result));
                 window.sessionStorage.setItem('access-token', rawResponse.headers.get('access-token'));
-                history.push('/');
-                window.location.href = '/';
+                // history.push('/');
+                // window.location.href = '/';
+                onSubmit();
             } else {
                 const error = new Error();
                 error.message = result.message || 'Something went wrong.';
@@ -93,9 +94,7 @@ export default function Login() {
                         {/* <span className='login-info'>UserName: </span><br />
                     <span className='login-info'>Password: </span><br /> */}
                         <br /><br />
-                        <ModalStateContext.Provider value={false} >
-                            <Link to='/'><span className='login-info'><Button variant='contained' type='submit' className='login-button'>Login</Button></span></ Link>
-                        </ModalStateContext.Provider>
+                        <span className='login-info'><Button variant='contained' color='primary' type='submit' className='login-button'>Login</Button></span>
                     </div>
                 </FormControl>
             </ValidatorForm>
