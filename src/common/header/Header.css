@@ -19,12 +19,7 @@ img {
     
 }
 
-.upcomingMovies {
-    text-align: center;
-    background: #ff9999;
-    padding: 8px 8px 8px 8px;
-    font-size: 1rem;
-}
+
 
 .ReactModal__Content--after-open {
   width:25% !important; 
